@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+	position: relative;
+	line-height: 1;
+
+	background-color: beige;
+	color: #000;
+}
+
+h1, h2, h4,h5 {
+    text-align: center;
+}
+
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 4em;
+    margin-right: 4em;
+    font-size: 18px;
+}
+ul {
+  margin-left: 50px;
+  font-size: 18px;
+}
+form {
+  position: relative;
+  left: 175px;
+  
+}
+
+rect {
+  fill: steelblue;
+}
+
+div {
+  margin-right: 150 px;
+  margin-left: 80 px;
+}
+
+line {
+    stroke: red;
+}
+
+div.tooltip {	
+  position: absolute;			
+  text-align: left;			
+  width: 165px;					
+  height: 30px;					
+  padding: 2px;				
+  font: 12px sans-serif;		
+  background: lightgrey;	
+  border: 0px;		
+  border-radius: 8px;			
+  pointer-events: none;			
+}
+
+path {
+  stroke: black;
+  fill : none;
+  stroke-width: 2px;
+}
+g.tick line {
+  stroke: black;
+}
+
+g.tick text {
+  font-size: 12px;
+  fill: black;
+}
+
+
+
+g.hidden line,
+g.hidden path {
+  display: none
+}
+
+ 
