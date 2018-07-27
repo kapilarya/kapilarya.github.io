@@ -15,6 +15,12 @@ h1, h2, h4,h5 {
     text-align: center;
 }
 
+.btnPad {
+	//margin-left:10px; 
+	margin-right:5px;
+	align: center;
+	}
+
 p {
     display: block;
     margin-top: 1em;

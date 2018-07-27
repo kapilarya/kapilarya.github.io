@@ -1,7 +1,7 @@
 d3.csv("./data/Salary.csv")
   .row(function(d){ return { education: d.Education, Male: Number(d.Male), Female: Number(d.Female), diffMale: d.MaleDiff, diffFemale: d.FemaleDiff} ;})
   .get(function(error,data){
-    
+
     var margin = {left: 200 , right: 50 , top: 40 , bottom:0 };
     console.log(data);
     var width = 500;
@@ -13,14 +13,14 @@ d3.csv("./data/Salary.csv")
 
     var diffGender = {Male: "diffMale", Female: "diffFemale"};
 
-    var textGender = {Male: "<ul><li>Male salaries increase with higher education,<br>with the exception of Doctrate degree</li><li>Male average annual salary is $57,335.<br> This is about 72% higher than females</li>", 
-                      Female: "<ul><li>Female salaries increase with higher education,<br>with the exception of Doctrate degree</li><li>Female average annual salary is $33,372.<br> This is about 42% lower than males</li>"};
+    var textGender = {Male: "<ul><li>Male salaries increase with higher education,<br>with the exception of Doctorate degree</li><li>Male average annual salary is $57,335.<br> This is about 72% higher than females</li>",
+                      Female: "<ul><li>Female salaries increase with higher education,<br>with the exception of Doctorate degree</li><li>Female average annual salary is $33,372.<br> This is about 42% lower than males</li>"};
 
     var maxHour = d3.max(data, function(d){return Math.max(d.Male,d.Female);});
 
     //console.log(maxHour);
 
-    var indLabel = ['No High School' , 'High School or GED' , 'Some College, no Degree' , 'Associate Degree' , 'Bachelor Degree' , 'Master Degree' 
+    var indLabel = ['No High School' , 'High School or GED' , 'Some College, no Degree' , 'Associate Degree' , 'Bachelor Degree' , 'Master Degree'
                     , 'Professional Degree beyond Bachelor' , 'Doctorate Degree'];
 
     var y = d3.scaleLinear()
@@ -104,8 +104,8 @@ d3.csv("./data/Salary.csv")
               .attr("x", function(d,i){return x(d.education);})
               .attr("y", function(d,i){return y(d[sex]);})
               .attr("height", function(d,i){return height - y(d[sex]);})
-              .attr("width", function(d,i){return 20;});   
-      t0.selectAll(".label").text(textGender[sex]);      
+              .attr("width", function(d,i){return 20;});
+      t0.selectAll(".label").text(textGender[sex]);
 
       annText1.style("opacity",0)
               .html(textGender[sex])
